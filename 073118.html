@@ -1,0 +1,61 @@
+<!-- Create a new HTML file in your Actualize folder and paste in the following contents:
+
+1) Modify the code such that the message prints to the console on double click instead of on click.
+2) Modify the code such that a different message prints to the console when you click on the p tag.
+3) Modify the code such that a message prints to the console whenever the mouse moves over the h1 tag.
+Bonus: Print the x and y coordinates of the mouse to the console whenever the mouse is moving over the h1 tag.
+Double bonus: Find a way to make the x and y coordinates show up on the web page itself! -->
+<!-- 1) Add a button to your page such that when you click the button, the header text turns red.
+2) Change the code such that clicking on the button changes the left padding of the header to 100 pixels.
+Bonus: Change the code such that clicking on the button changes the header text to a random color (this may require some googling...).
+Double bonus: Play around with other styles to create different effects! -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+
+  <style>
+    .header {
+      /*color: red;*/
+      padding-left: 100px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1 ondblclick="doSomething()"; onmouseover="question3()"; onmousemove="showCoords()">Alexander Hamilton</h1>
+  <p onclick="question2()">Alexander Hamilton (January 11, 1755 or 1757 – July 12, 1804) was an American statesman and one of the Founding Fathers of the United States. He was an influential interpreter and promoter of the U.S. Constitution, as well as the founder of the nation's financial system, the Federalist Party, the United States Coast Guard, and The New York Post newspaper.</p>
+  <button type="button" onclick="headerTurnsRed()">Click Me</button>
+
+  <script>
+    function doSomething() {
+      console.log("You clicked on the header!");
+    }
+
+    function question2() {
+      console.log("we the people");
+    }
+
+    function question3() {
+      console.log("I'm an impt founding father");
+    }
+
+    function showCoords() {
+      console.log(event.clientX, event.clientY);
+    }
+
+    function headerTurnsRed() {
+     // question 1 - turns text red
+      // var header = document.querySelector('h1');
+      // console.log("test test");
+      // header.classList.toggle('header');
+    
+      // question 2 = changes padding on the left to 100px
+      var header = document.querySelector('h1');
+      console.log("test test");
+      header.classList.toggle('header');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Example</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+  <script>
+    alert( 'Hello, world' );
+  </script>
+  <div id="container" style="width:100%; height:400px;"></div>
+    <script>
+      $(function () { 
+      var myChart = Highcharts.chart('container', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Seltzer Consumption'
+            },
+            subtitle: {
+                  text: 'How much is too much?'
+            },
+            xAxis: {
+                categories: ['Apples', 'Bananas', 'Oranges']
+            },
+            yAxis: {
+                title: {
+                    text: 'Seltzers Drank'
+                }
+            },
+            series: [{
+                name: 'Jane',
+                data: [1, 0, 4]
+            }, {
+                name: 'John',
+                data: [5, 7, 3]
+            }]
+          });
+        });
+    </script>
+</body>
+</html>
