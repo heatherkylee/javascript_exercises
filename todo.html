@@ -1,0 +1,52 @@
+<!-- 1) Clicking on a todo repeatedly should toggle between complete and incomplete, where a completed task has strikethrough text. (hint: make a CSS class called .complete)
+2) Add a button “Hide completed tasks” which will hide all tasks that have been marked complete. (hint: make a CSS class called .hidden)
+3) Add a button “Show all tasks” which will unhide any hidden tasks to see the complete list.
+Bonus: Add a new tag that displays a count of how many complete tasks there are in the list. It should automatically update each time tasks are marked as complete.
+Double bonus: Add more features to make your todo app similar to this example app (don’t worry about making it look pretty): -->
+<!-- 
+    // event listener
+    // run function
+    // get HTML element
+    // modify it -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+  <style>
+    .complete {
+      text-decoration: line-through;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <p onclick="makeStrikethrough(this)">Pay bills</p>
+  <p onclick="makeStrikethrough(this)">Wash car</p>
+  <p onclick="makeStrikethrough(this)">Get laundry</p>
+  <button onclick="hideCompletedTasks()">Hide Completed Tasks</button>
+  <button onclick="showCompletedTasks()">Show Completed Tasks</button>
+<script>
+  function makeStrikethrough(ptag) {
+    ptag.classList.toggle('complete');
+  }
+
+  function hideCompletedTasks() {
+  var completedTasks = document.querySelectorAll('.complete');
+  for (var i = 0; i < completedTasks.length; i++) {
+        completedTasks[i].classList.add('hidden');
+      }
+    }
+
+  function showCompletedTasks() {
+    var hiddenTasks = document.querySelectorAll('.hidden');
+    for (var i = 0; i < hiddenTasks.length; i++) {
+          hiddenTasks[i].classList.remove('hidden');
+        }   
+  }
+</script>
+</body>
+</html>
