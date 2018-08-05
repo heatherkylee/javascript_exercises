@@ -41,7 +41,7 @@ function sum(numbers) {
 function string(letters) {
   var result = "";
   letters.forEach(function(letter) {
-    result.join(letter);
+    result.push(letter);
   });
   return result;
 }
